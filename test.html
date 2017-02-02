@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ActionCableWebSocket</title>
+    <script type="text/javascript" src="action_cable_web_socket.js"></script>
+    <script>
+      var acws = new ACWS("ws://localhost:3000/cable");
+      acws.ws.onopen = function(e) {
+        acws.subscribe("TestChannel");
+      }
+      acws.ws.onmessage = function (event) {
+        console.log(event.data);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
