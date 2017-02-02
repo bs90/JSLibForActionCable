@@ -13,6 +13,7 @@ acws.ws.onopen = function(e) {
 ## Subscribe/Unsubscribe to a channel
 
 ```js
+acws.subscribe("<channel name>");
 acws.unsubscribe("<channel name>");
 ```
 
