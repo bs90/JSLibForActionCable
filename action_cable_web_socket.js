@@ -12,11 +12,11 @@ class ACWS {
   }
 
   unsubscribe(channel) {
-    var subscibe_content = {
+    var unsubscibe_content = {
       "command": "unsubscribe",
       "identifier": "{\"channel\":\"" + channel + "\"}"
     };
-    this.ws.send(JSON.stringify(subscibe_content));
+    this.ws.send(JSON.stringify(unsubscibe_content));
   }
 
   message(channel, action, message_key, message) {
